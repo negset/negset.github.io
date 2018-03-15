@@ -24,11 +24,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class^="icon-"], [class*=" icon-"].medium {
-  font-size: 3rem;
-  line-height: 4rem;
-}
-
 .icon-push7:before {
   content: "\e904";
 }

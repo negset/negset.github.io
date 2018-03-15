@@ -1,13 +1,13 @@
 body {
   color: rgba(0, 0, 0, 0.87);
   font-family: 'Roboto','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo',sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #F0F0F0;
 }
 
 @media (max-width: 768px) {
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -15,31 +15,6 @@ body {
   .container {
     width: 80%;
   }
-}
-
-.content-header {
-  color: #eee;
-  background-color: #3F51B5;
-  margin: 0 0 1rem 0;
-  padding: 4rem 0 2.5rem 0;
-  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-}
-
-.list-inline {
-  padding-left: 0;
-  list-style: none;
-  margin: 8px 0;
-}
-
-.list-inline>li {
-  display: inline-block;
-  padding: 4px 2px;
-  margin-left: 0 !important;
-}
-
-.list-inline.social-btns {
-  margin: 1rem 0;
 }
 
 .btn {
@@ -55,32 +30,59 @@ body {
   background-color: #E91E63;
 }
 
-.btn.social {
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
-  vertical-align: middle;
-  font-size: 1.1rem;
-  padding: 0;
+.content-header {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #3F51B5;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  padding: 4rem 0 2.5rem 0;
+  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
 
-.btn.social.facebook { background-color: #425F9C; }
-.btn.social.facebook:hover { background-color: #5d7bbb; }
-.btn.social.feed { background-color: #ed8433; }
-.btn.social.feed:hover { background-color: #f19c5b; }
-.btn.social.github { background-color: #454545; }
-.btn.social.github:hover { background-color: #656565; }
-.btn.social.google-plus { background-color: #DB4437; }
-.btn.social.google-plus:hover { background-color: #e37268; }
-.btn.social.hatena { background-color: #008fde; }
-.btn.social.hatena:hover { background-color: #00a6ff; }
-.btn.social.line { background-color: #00b900; }
-.btn.social.line:hover { background-color: #00cc00; }
-.btn.social.pocket { background-color: #ee4056; }
-.btn.social.pocket:hover { background-color: #f37283; }
-.btn.social.push7 { background-color: #efab01; }
-.btn.social.push7:hover { background-color: #febd1b; }
-.btn.social.pushbullet { background-color: #4ab367; }
-.btn.social.pushbullet:hover { background-color: #6ec486; }
-.btn.social.twitter { background-color: #1da1f2; }
-.btn.social.twitter:hover { background-color: #56b8f5; }
+.content-header .header-icon {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  border: 3px solid #fff;
+}
+
+.content-header .header-name {
+  display: block;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.content-card {
+  color: rgba(0, 0, 0, 0.54);
+  background-color: #fff;
+  text-align: center;
+}
+
+.content-card .card-icon {
+  display: block;
+}
+
+.content-card .card-icon.material-icons {
+  font-size: 4rem;
+}
+
+.content-card .card-icon[class^="icon-"], [class*=" icon-"] {
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+.content-card .card-title {
+  display: block;
+  font-size: 2rem;
+  font-weight: medium;
+  color: rgba(0, 0, 0, 0.87);
+  margin: .5rem 0;
+}
+
+.content-card .card-btn {
+  display: block;
+  margin-top: 1.5rem;
+}
+
+
