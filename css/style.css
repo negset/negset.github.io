@@ -2,7 +2,7 @@ body {
   color: rgba(0, 0, 0, 0.87);
   font-family: 'Roboto','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo',sans-serif;
   font-size: 16px;
-  background-color: #37474F;
+  background-color: #F0F0F0;
 }
 
 @media (max-width: 768px) {
@@ -18,8 +18,12 @@ body {
 }
 
 .content-header {
-  color: #fff;
+  color: #eee;
   background-color: #3F51B5;
+  margin: 0 0 1rem 0;
+  padding: 4rem 0 2.5rem 0;
+  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
 
 .list-inline {
@@ -40,11 +44,15 @@ body {
 
 .btn {
   text-transform: none;
-  background-color: #2196F3;
+  background-color: #EC407A;
 }
 
 .btn:hover {
-  background-color: #42A5F5;
+  background-color: #F06292;
+}
+
+.btn:focus {
+  background-color: #E91E63;
 }
 
 .btn.social {
