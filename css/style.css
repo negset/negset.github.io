@@ -21,14 +21,14 @@ body {
   }
 }
 
+.container {
+  padding-bottom: 3rem;
+}
+
 @media (min-width: 993px) {
   .container {
     width: 80%;
   }
-}
-
-.container {
-  padding-bottom: 40px;
 }
 
 .btn {
@@ -47,6 +47,7 @@ body {
 .content-header {
   color: rgba(255, 255, 255, 0.7);
   background-color: #3F51B5;
+  font-weight: 300;
   text-align: center;
   margin: 0 0 1rem 0;
   padding: 4rem 0 2.5rem 0;
@@ -65,6 +66,7 @@ body {
   display: block;
   color: #fff;
   font-size: 3rem;
+  font-weight: 400;
 }
 
 .content-card {
@@ -89,7 +91,7 @@ body {
 .content-card .card-title {
   display: block;
   font-size: 2rem;
-  font-weight: medium;
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.87);
   margin: .5rem 0;
 }
@@ -104,7 +106,7 @@ body {
   background-color: #3F51B5;
   position: absolute;
   width: 100%;
-  height: 40px;
+  height: 3rem;
   bottom: 0;
   text-align: center;
   overflow: hidden;
@@ -113,6 +115,6 @@ body {
 }
 
 .content-footer .footer-copyright {
-  height: 40px;
-  line-height: 40px;
+  line-height: 3rem;
+  font-weight: 300;
 }
