@@ -32,8 +32,9 @@ body {
 }
 
 .btn {
-  text-transform: none;
   background-color: #EC407A;
+  text-transform: none;
+  width: 6rem;
 }
 
 .btn:hover {
@@ -77,15 +78,7 @@ body {
 
 .content-card .card-icon {
   display: block;
-}
-
-.content-card .card-icon.material-icons {
-  font-size: 4rem;
-}
-
-.content-card .card-icon[class^="icon-"], [class*=" icon-"] {
   font-size: 3rem;
-  line-height: 4rem;
 }
 
 .content-card .card-title {
