@@ -1,4 +1,4 @@
 # negset.github.io
-https://negset.github.io
+https://negset.com
 
 negset's home page.
