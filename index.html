@@ -22,16 +22,26 @@
 
   <body>
     <div class="content-header">
-      <img src="img/profile.svg" class="circle responsive-img header-icon">
+      <div class="wave one"></div>
+      <div class="wave two"></div>
+      <div class="wave three"></div>
+      <img class="circle responsive-img header-icon" src="img/profile.svg">
       <span class="header-name">negset</span>
-      <span>Amateur programmer, Android lover</span>
+      <span class="header-text">Amateur programmer, Android lover</span>
     </div>
 
-    <div class="container">
-      <div class="row">
+    <div class="tabs-base">
+      <ul class="tabs">
+        <li class="tab"><a class="active" href="#tab-content-1"><i class="material-icons">person</i>SOCIALS</a></li>
+        <li class="tab"><a href="#tab-content-2"><i class="material-icons">palette</i>WORKS</a></li>
+      </ul>
+    </div>
 
+    <div id="tab-content-1" class="container main-container">
+      <div class="row">
         <div class="col s12 m6">
-          <div class="card-panel content-card">
+
+          <div class="card-panel">
             <span class="card-icon icon-github"></span>
             <span class="card-title">GitHub</span>
             <span>Writing code in Java &amp; Kotlin.</span>
@@ -42,7 +52,7 @@
         </div>
 
         <div class="col s12 m6">
-          <div class="card-panel content-card">
+          <div class="card-panel">
             <i class="card-icon material-icons">web</i>
             <span class="card-title">neggly</span>
             <span>Writing articles about Android.</span>
@@ -53,7 +63,7 @@
         </div>
 
         <div class="col s12 m6">
-          <div class="card-panel content-card">
+          <div class="card-panel">
             <span class="card-icon icon-twitter"></span>
             <span class="card-title">Twitter</span>
             <span>@negself</span>
@@ -64,7 +74,7 @@
         </div>
 
         <div class="col s12 m6">
-          <div class="card-panel content-card">
+          <div class="card-panel">
             <span class="card-icon icon-amazon"></span>
             <span class="card-title">Amazon</span>
             <span>My wish list is here.</span>
@@ -77,10 +87,44 @@
       </div>
     </div>
 
+    <div id="tab-content-2" class="container main-container">
+      <div class="row">
+
+        <div class="col s12 m6">
+          <div class="card-panel bg-img negbeat">
+            <div class="card-content">
+              <span class="card-title">NegBeat</span>
+              <a class="waves-effect waves-light btn" href="#">MORE</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <div class="card-panel bg-img macaron">
+            <div class="card-content">
+              <span class="card-title">Macaron</span>
+              <a class="waves-effect waves-light btn" href="#">MORE</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <div class="card-panel bg-img shooter">
+            <div class="card-content">
+              <span class="card-title">ShooterGame</span>
+              <a class="waves-effect waves-light btn" href="#">MORE</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
     <div class="content-footer">
-      <span class="footer-copyright">&copy; 2018 negset</span>
+      <span class="footer-copyright">&copy; 2019 negset</span>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
