@@ -124,10 +124,15 @@ body {
   bottom: 8em;
   background: #475dcc;
   width: 300%;
-  transform-origin: 50% 50%;
-  border-radius: 45%;
+  border-radius: 46%;
   animation: drift 15000ms infinite linear;
   z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .content-header .wave {
+    border-radius: 42%;
+  }
 }
 
 .content-header .wave:before {
