@@ -124,14 +124,14 @@ body {
   bottom: 8em;
   background: #475dcc;
   width: 300%;
-  border-radius: 46%;
+  border-radius: 45%;
   animation: drift 15000ms infinite linear;
   z-index: -1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .content-header .wave {
-    border-radius: 42%;
+    border-radius: 40%;
   }
 }
 
