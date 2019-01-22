@@ -26,12 +26,6 @@ body {
   padding-bottom: 3rem;
 }
 
-@media (min-width: 993px) {
-  .container {
-    width: 80%;
-  }
-}
-
 .btn {
   background-color: #EC407A;
   border-radius: 4px;
@@ -69,14 +63,29 @@ body {
 }
 
 .tabs .tab a {
-  color: #888888;
   padding: 0 24px !important;
+}
+
+.tabs .tab a, .tabs .tab a:hover {
+  color: #888888;
+}
+
+.tabs .tab a.active, .tabs .tab a:hover.active {
+  color: #ee6e73;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+  background-color: transparent;
 }
 
 .tabs .tab .material-icons {
   font-size: 1.3rem;
   line-height: inherit;
   float: left;
+}
+
+.tabs .tab .waves-effect .waves-ripple {
+  background-color: rgba(246, 178, 181, 0.5);
 }
 
 .tabs .indicator {
