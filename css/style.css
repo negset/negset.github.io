@@ -189,6 +189,10 @@ body {
   background-image: url(../img/card_shooter.png);
 }
 
+.bg-img.hakooshi {
+  background-image: url(../img/card_hakooshi.png);
+}
+
 .card-panel.bg-img::before {
   background-color: rgba(0,0,0,0.4);
   position: absolute;
