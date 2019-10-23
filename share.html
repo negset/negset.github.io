@@ -1,0 +1,33 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>share test</title>
+    <script>
+        function share(image) {
+            console.log("name", image.name);
+
+            const shareData = { files: [image] };
+            if (navigator.canShare && navigator.canShare(shareData)) {
+                console.log("シェア可能！");
+                navigator.share({
+                    files: [image]
+                }).then(() => {
+                    console.log('Share was successful.')
+                }).catch((error) => {
+                    console.log('Sharing failed', error)
+                });
+            } else {
+                console.log('Your system doesn\'t support sharing files.');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="file" accept="image/*" capture onchange="share(this.files[0])"></input>
+</body>
+
+</html>
