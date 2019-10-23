@@ -28,7 +28,6 @@
         <td><input id="shared_file" name="shared_file" type="file" multiple></td>
       </tr>
     </table>
-    <input id="shared_file" name="shared_file">
     <input type="submit" value="Share">
   </form>
 
@@ -40,7 +39,7 @@
       const text = "本日のスケジュールはこちらです．";
       const url = "https://hakooshi.live";
       const files = document.getElementById('shared_file').files;
-      const files2 = { File("https://negset.com/favicon.png") };
+      const files2 = [ File("https://negset.com/favicon.png") ];
 
       let data = {};
       if (files2.length > 0) {
