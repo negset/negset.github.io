@@ -1,51 +1,10 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>share test</title>
-    <script>
-      'use strict';
-      document.querySelector('form').onsubmit = () => {
-        const error = document.getElementById('error');
-        const title = document.getElementById('shared_title').value;
-        const text = document.getElementById('shared_text').value;
-        const url = document.getElementById('shared_url').value;
-        const files = document.getElementById('shared_file').files;
-
-        let data = {};
-        if (files.length > 0) {
-          data.files = files;
-
-          if (!navigator.canShare || !navigator.canShare(data)) {
-      	    error.textContent = 'Share not attempted - file sharing is not supported by this browser';
-      	    return false;
-          }
-        }
-        if (title !== '')
-          data.title = title;
-        if (text !== '')
-          data.text = text;
-        if (url !== '')
-          data.url = url;
-
-        if (navigator.canShare && !navigator.canShare(data)) {
-      	  error.textContent = 'Share not attempted - please supply title, text, url or files';
-      	  return false;
-        }
-        error.textContent = '';
-        navigator.share(data)
-          .then(() => {
-        })
-          .catch((err) => {
-          console.log('Unsuccessful share');
-          error.textContent = 'Share failed: ' + err.message;
-        });
-
-        return false;
-      };
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>share test</title>
 </head>
 
 <body>
@@ -71,6 +30,48 @@
     </table>
     <input type="submit" value="Share">
   </form>
+
+  <script>
+    'use strict';
+    document.querySelector('form').onsubmit = () => {
+      const error = document.getElementById('error');
+      const title = document.getElementById('shared_title').value;
+      const text = document.getElementById('shared_text').value;
+      const url = document.getElementById('shared_url').value;
+      const files = document.getElementById('shared_file').files;
+
+      let data = {};
+      if (files.length > 0) {
+        data.files = files;
+
+        if (!navigator.canShare || !navigator.canShare(data)) {
+    	    error.textContent = 'Share not attempted - file sharing is not supported by this browser';
+    	    return false;
+        }
+      }
+      if (title !== '')
+        data.title = title;
+      if (text !== '')
+        data.text = text;
+      if (url !== '')
+        data.url = url;
+
+      if (navigator.canShare && !navigator.canShare(data)) {
+    	  error.textContent = 'Share not attempted - please supply title, text, url or files';
+    	  return false;
+      }
+      error.textContent = '';
+      navigator.share(data)
+        .then(() => {
+      })
+        .catch((err) => {
+        console.log('Unsuccessful share');
+        error.textContent = 'Share failed: ' + err.message;
+      });
+
+      return false;
+    };
+  </script>
 </body>
 
 </html>
