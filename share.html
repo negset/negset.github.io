@@ -6,29 +6,70 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>share test</title>
     <script>
-        function share(image) {
-            console.log("name", image.name);
+      document.querySelector('form').onsubmit = () => {
+        const error = document.getElementById('error');
+        const title = document.getElementById('shared_title').value;
+        const text = document.getElementById('shared_text').value;
+        const url = document.getElementById('shared_url').value;
+        const files = document.getElementById('shared_file').files;
 
-            const shareData = { files: [image] };
-            if (navigator.canShare && navigator.canShare(shareData)) {
-                console.log("シェア可能！");
-                navigator.share({
-                    files: [image]
-                }).then(() => {
-                    console.log('Share was successful.')
-                }).catch((error) => {
-                    console.log('Sharing failed', error)
-                });
-            } else {
-                console.log('Your system doesn\'t support sharing files.');
-            }
+        let data = {};
+        if (files.length > 0) {
+          data.files = files;
+
+          if (!navigator.canShare || !navigator.canShare(data)) {
+      	    error.textContent = 'Share not attempted - file sharing is not supported by this browser';
+      	    return false;
+          }
         }
-        share("favicon.png");
+        if (title !== '')
+          data.title = title;
+        if (text !== '')
+          data.text = text;
+        if (url !== '')
+          data.url = url;
+
+        if (navigator.canShare && !navigator.canShare(data)) {
+      	  error.textContent = 'Share not attempted - please supply title, text, url or files';
+      	  return false;
+        }
+        error.textContent = '';
+        navigator.share(data)
+          .then(() => {
+        })
+          .catch((err) => {
+          console.log('Unsuccessful share');
+          error.textContent = 'Share failed: ' + err.message;
+        });
+
+        return false;
+      };
     </script>
 </head>
 
 <body>
-    <input type="file" accept="image/*" capture onchange="share(this.files[0])"></input>
+  <div id="error"></div>
+  <form method="POST" action="/share/">
+    <table>
+      <tr>
+        <td><label for="shared_title">Title:</label></td>
+        <td><input id="shared_title" name="shared_title" value="Example Title"></td>
+      </tr>
+      <tr>
+        <td><label for="shared_text">Text:</label></td>
+        <td><input id="shared_text" name="shared_text" value="Example text"></td>
+      </tr>
+      <tr>
+        <td><label for="shared_url">URL:</label></td>
+        <td><input id="shared_url" name="shared_url" value="https://example.com/a?b=c"></td>
+      </tr>
+      <tr>
+        <td><label for="shared_file">File(s):</label></td>
+        <td><input id="shared_file" name="shared_file" type="file" multiple></td>
+      </tr>
+    </table>
+    <input type="submit" value="Share">
+  </form>
 </body>
 
 </html>
