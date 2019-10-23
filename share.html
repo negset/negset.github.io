@@ -40,10 +40,11 @@
       const text = "本日のスケジュールはこちらです．";
       const url = "https://hakooshi.live";
       const files = document.getElementById('shared_file').files;
+      const files2 = { File("https://negset.com/favicon.png") };
 
       let data = {};
-      if (files.length > 0) {
-        data.files = files;
+      if (files2.length > 0) {
+        data.files = files2;
 
         if (!navigator.canShare || !navigator.canShare(data)) {
     	    error.textContent = 'Share not attempted - file sharing is not supported by this browser';
