@@ -189,8 +189,8 @@ body {
   background-image: url(../img/card_shooter.png);
 }
 
-.bg-img.hakooshi {
-  background-image: url(../img/card_hakooshi.png);
+.bg-img.nomeiryo {
+  background-image: url(../img/card_nomeiryo.png);
 }
 
 .card-panel.bg-img::before {
