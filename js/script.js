@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const tabs = document.querySelector('.tabs');
-  M.Tabs.init(tabs);
+document.addEventListener('DOMContentLoaded', () => {
+  M.Tabs.init(document.querySelector('.tabs'));
 });
