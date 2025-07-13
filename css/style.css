@@ -192,6 +192,10 @@ body {
   background-image: url(../img/card_firple.png);
 }
 
+.card-panel.bg-img.fontswap {
+  background-image: url(../img/card_fontswap.png);
+}
+
 .card-panel.bg-img.nomeiryo {
   background-image: url(../img/card_nomeiryo.png);
 }
