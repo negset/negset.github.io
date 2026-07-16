@@ -1,169 +1,501 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ja">
+  <head>
+    <title>negset.com</title>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#4285F4">
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=1,minimum-scale=1,maximum-scale=1"
+    />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link
+      href="https://cdn.jsdelivr.net/npm/beercss@4.0.23/dist/cdn/beer.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/beercss@4.0.23/dist/cdn/beer.min.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:opsz,wght@17..18,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <script type="module" src="js/script.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=1,minimum-scale=1,maximum-scale=1">
-
-  <title>negset.com</title>
-
-  <meta name="description" content="negset's Home Page">
-  <meta name="theme-color" content="#3F51B5">
-  <meta name="pinterest" content="nopin">
-
-  <link rel="shortcut icon" href="favicon.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/icomoon.css">
-</head>
-
-<body>
-  <div class="content-header">
-    <div class="wave one"></div>
-    <div class="wave two"></div>
-    <div class="wave three"></div>
-    <img class="circle responsive-img header-icon" src="img/profile.svg">
-    <span class="header-name">negset</span>
-    <span class="header-text">hobby programmer; Android lover</span>
-  </div>
-
-  <ul class="tabs">
-    <li class="tab">
-      <a class="waves-effect active" href="#socials">
-        <span class="card-icon icon-socials"></span>SOCIALS
-      </a>
-    </li>
-    <li class="tab">
-      <a class="waves-effect" href="#works">
-        <span class="card-icon icon-works"></span>WORKS
-      </a>
-    </li>
-  </ul>
-
-  <div id="socials" class="container main-container">
-    <div class="row">
-
-      <div class="col s12 m6">
-        <div class="card-panel">
-          <div class="card-content">
-            <div class="card-icon icon-github"></div>
-            <div class="card-text">@negset</div>
-            <a class="waves-effect waves-light btn" href="https://github.com/negset" target="_blank">FOLLOW</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col s12 m6">
-        <div class="card-panel">
-          <div class="card-content">
-            <div class="card-icon icon-twitter"></div>
-            <div class="card-text">@negset</div>
-            <a class="waves-effect waves-light btn" href="https://x.com/negset" target="_blank">FOLLOW</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col s12 m6">
-        <div class="card-panel">
-          <div class="card-content">
-            <div class="card-icon icon-neggly"></div>
-            <div class="card-text">neggly.org</div>
-            <a class="waves-effect waves-light btn" href="https://neggly.org" target="_blank">SUBSCRIBE</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col s12 m6">
-        <div class="card-panel">
-          <div class="card-content">
-            <div class="card-icon icon-amazon"></div>
-            <div class="card-text">wish list</div>
-            <a class="waves-effect waves-light btn" href="http://amzn.asia/3AocMcW" target="_blank">DONATE</a>
-          </div>
-        </div>
-      </div>
-
+  <body>
+    <div class="top-container">
+      <div class="wave-anim one"></div>
+      <div class="wave-anim two"></div>
+      <div class="wave-anim three"></div>
+      <section class="responsive center-align">
+        <img class="circle" src="img/negset.svg" />
+        <span class="h3 white-text margin">negset</span>
+        <nav class="center-align">
+          <a
+            class="button small-blur"
+            href="https://github.com/negset"
+            target="_blank"
+          >
+            <i class="tiny">
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <use href="img/github.svg#icon"></use>
+              </svg>
+            </i>
+            <span>@negset</span>
+          </a>
+          <a
+            class="button small-blur"
+            href="https://x.com/negset"
+            target="_blank"
+          >
+            <i class="tiny">
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <use href="img/x.svg#icon"></use>
+              </svg>
+            </i>
+            <span>@negset</span>
+          </a>
+        </nav>
+      </section>
+      <button class="small circle small-blur" id="light-dark-toggle">
+        <i class="small">dark_mode</i>
+      </button>
     </div>
-  </div>
 
-  <div id="works" class="container main-container">
-    <div class="row">
+    <div class="main-container">
+      <section class="responsive">
+        <h3 class="center-align large-margin bold">Links</h3>
 
-      <div class="col s12 m6">
-        <div class="card-panel bg-img firple">
-          <div class="card-content">
-            <div class="card-title">Firple</div>
-            <div class="card-text">プログラミング用フォント</div>
-            <a class="waves-effect waves-light btn" href="https://negset.com/Firple" target="_blank">MORE</a>
+        <article class="border round no-padding margin">
+          <div class="grid no-space">
+            <div class="s12 m4">
+              <img class="responsive" src="img/negglyorg.webp" />
+            </div>
+            <div class="s12 m8">
+              <div class="large-padding">
+                <h5>neggly.org</h5>
+                <p>
+                  Android、ガジェット、プログラミングなどをテーマに雑多に投稿している個人ブログ。
+                </p>
+                <aside class="row wrap">
+                  <button class="chip fill">blog</button>
+                  <button class="chip fill">hugo</button>
+                </aside>
+                <nav class="wrap">
+                  <a
+                    class="button round"
+                    href="https://neggly.org"
+                    target="_blank"
+                  >
+                    <i class="small">open_in_new</i>
+                    <span>Web</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </article>
+      </section>
 
-      <div class="col s12 m6">
-        <div class="card-panel bg-img fontswap">
-          <div class="card-content">
-            <span class="card-title">Font Swap</span>
-            <div class="card-text">フォントを置き換える Chrome 拡張機能</div>
-            <a class="waves-effect waves-light btn" href="https://negset.com/FontSwap" target="_blank">MORE</a>
+      <section class="responsive">
+        <h3 class="center-align large-margin bold">Projects</h3>
+
+        <article class="border round no-padding margin">
+          <div class="grid no-space">
+            <div class="s12 m4">
+              <img class="responsive" src="img/firple.webp" />
+            </div>
+            <div class="s12 m8">
+              <div class="large-padding">
+                <h5>Firple</h5>
+                <p>
+                  プログラミング用フォントとして人気の高い Fira Code
+                  に、可読性の高い IBM Plex Sans JP
+                  を合成したプログラミング用日本語フォント。
+                </p>
+                <aside class="row wrap">
+                  <button class="chip fill">font</button>
+                  <button class="chip fill">python</button>
+                </aside>
+                <nav class="wrap">
+                  <a
+                    class="button round"
+                    href="https://negset.com/Firple"
+                    target="_blank"
+                  >
+                    <i class="small">open_in_new</i>
+                    <span>Web</span>
+                  </a>
+                  <a
+                    class="button round"
+                    href="https://github.com/negset/Firple"
+                    target="_blank"
+                  >
+                    <i class="tiny">
+                      <svg xmlns="http://www.w3.org/2000/svg">
+                        <use href="img/github.svg#icon"></use>
+                      </svg>
+                    </i>
+                    <span>Source</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </article>
 
-      <div class="col s12 m6">
-        <div class="card-panel bg-img nomeiryo">
-          <div class="card-content">
-            <span class="card-title">NO Meiryo</span>
-            <div class="card-text">メイリオを駆逐する Chrome 拡張機能</div>
-            <a class="waves-effect waves-light btn" href="https://negset.com/NoMeiryo" target="_blank">MORE</a>
+        <article class="border round no-padding margin">
+          <div class="grid no-space">
+            <div class="s12 m4">
+              <img class="responsive" src="img/fontswap.webp" />
+            </div>
+            <div class="s12 m8">
+              <div class="large-padding">
+                <h5>Font Swap</h5>
+                <p>
+                  ウェブサイトのフォントを任意のフォントに置き換えるブラウザ拡張機能。
+                </p>
+                <aside class="row wrap">
+                  <button class="chip fill">browser extension</button>
+                  <button class="chip fill">javascript</button>
+                </aside>
+                <nav class="wrap">
+                  <a
+                    class="button round"
+                    href="https://chromewebstore.google.com/detail/font-swap/onkclklnckoplhgebmpakffpgpapcaek"
+                    target="_blank"
+                  >
+                    <i class="tiny">
+                      <svg xmlns="http://www.w3.org/2000/svg">
+                        <use href="img/googlechrome.svg#icon"></use>
+                      </svg>
+                    </i>
+                    <span>Web Store</span>
+                  </a>
+                  <a
+                    class="button round"
+                    href="https://negset.com/FontSwap"
+                    target="_blank"
+                  >
+                    <i class="small">open_in_new</i>
+                    <span>Web</span>
+                  </a>
+                  <a
+                    class="button round"
+                    href="https://github.com/negset/FontSwap"
+                    target="_blank"
+                  >
+                    <i class="tiny">
+                      <svg xmlns="http://www.w3.org/2000/svg">
+                        <use href="img/github.svg#icon"></use>
+                      </svg>
+                    </i>
+                    <span>Source</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </article>
 
-      <div class="col s12 m6">
-        <div class="card-panel bg-img shooter">
-          <div class="card-content">
-            <span class="card-title">ShooterGame</span>
-            <div class="card-text">自作シューティングゲーム</div>
-            <a class="waves-effect waves-light btn" href="https://github.com/negset/shootergame"
-              target="_blank">MORE</a>
+        <article class="border round no-padding margin">
+          <div class="grid no-space">
+            <div class="s12 m4">
+              <img class="responsive" src="img/zlox.webp" />
+            </div>
+            <div class="s12 m8">
+              <div class="large-padding">
+                <h5>zlox</h5>
+                <p>
+                  Zig で実装した Lox 言語のバイトコードインタプリタ
+                  (VM)。WebAssembly によりブラウザ上で実行可能。
+                </p>
+                <aside class="row wrap">
+                  <button class="chip fill">programming language</button>
+                  <button class="chip fill">zig</button>
+                  <button class="chip fill">webassembly</button>
+                  <button class="chip fill">lox</button>
+                </aside>
+                <nav class="wrap">
+                  <a
+                    class="button round"
+                    href="https://negset.com/zlox"
+                    target="_blank"
+                  >
+                    <i class="small">open_in_new</i>
+                    <span>Web</span>
+                  </a>
+                  <a
+                    class="button round"
+                    href="https://github.com/negset/zlox"
+                    target="_blank"
+                  >
+                    <i class="tiny">
+                      <svg xmlns="http://www.w3.org/2000/svg">
+                        <use href="img/github.svg#icon"></use>
+                      </svg>
+                    </i>
+                    <span>Source</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </article>
 
-      <div class="col s12 m6">
-        <div class="card-panel bg-img macaron">
-          <div class="card-content">
-            <span class="card-title">Macaron</span>
-            <div class="card-text">自作リズムゲーム</div>
-            <a class="waves-effect waves-light btn" href="https://github.com/negset/macaron" target="_blank">MORE</a>
+        <article class="border round no-padding margin">
+          <div class="grid no-space">
+            <div class="s12 m4">
+              <img class="responsive" src="img/jumpthrow.webp" />
+            </div>
+            <div class="s12 m8">
+              <div class="large-padding">
+                <h5>jumpthrow</h5>
+                <p>
+                  とあるシューティングゲームのジャンプ投げセットアップを練習するためのツール。
+                </p>
+                <aside class="row wrap">
+                  <button class="chip fill">javascript</button>
+                </aside>
+                <nav class="wrap">
+                  <a
+                    class="button round"
+                    href="https://negset.com/jumpthrow"
+                    target="_blank"
+                  >
+                    <i class="small">open_in_new</i>
+                    <span>Web</span>
+                  </a>
+                  <a
+                    class="button round"
+                    href="https://github.com/negset/jumpthrow"
+                    target="_blank"
+                  >
+                    <i class="tiny">
+                      <svg xmlns="http://www.w3.org/2000/svg">
+                        <use href="img/github.svg#icon"></use>
+                      </svg>
+                    </i>
+                    <span>Source</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </article>
 
-      <div class="col s12 m6">
-        <div class="card-panel bg-img negbeat">
-          <div class="card-content">
-            <span class="card-title">NegBeat</span>
-            <div class="card-text">自作リズムゲーム</div>
-            <a class="waves-effect waves-light btn" href="https://youtu.be/LOFhuq8XyRc" target="_blank">MORE</a>
+        <article class="border round no-padding margin">
+          <div class="grid no-space">
+            <div class="s12 m4">
+              <img class="responsive" src="img/mojiemoji.webp" />
+            </div>
+            <div class="s12 m8">
+              <div class="large-padding">
+                <h5>mojiemoji</h5>
+                <p>Discord / Slack 用のテキスト絵文字作成ツール。</p>
+                <aside class="row wrap">
+                  <button class="chip fill">javascript</button>
+                </aside>
+                <nav class="wrap">
+                  <a
+                    class="button round"
+                    href="https://negset.com/mojiemoji"
+                    target="_blank"
+                  >
+                    <i class="small">open_in_new</i>
+                    <span>Web</span>
+                  </a>
+                  <a
+                    class="button round"
+                    href="https://github.com/negset/mojiemoji"
+                    target="_blank"
+                  >
+                    <i class="tiny">
+                      <svg xmlns="http://www.w3.org/2000/svg">
+                        <use href="img/github.svg#icon"></use>
+                      </svg>
+                    </i>
+                    <span>Source</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </article>
 
+        <article class="border round no-padding margin">
+          <div class="grid no-space">
+            <div class="s12 m4">
+              <img class="responsive" src="img/nomeiryo.webp" />
+            </div>
+            <div class="s12 m8">
+              <div class="large-padding">
+                <h5>NO Meiryo</h5>
+                <p>
+                  ウェブサイトで指定されたメイリオフォントを任意のフォントに置き換えるブラウザ拡張機能。
+                </p>
+                <aside class="row wrap">
+                  <button class="chip fill">browser extension</button>
+                  <button class="chip fill">javascript</button>
+                </aside>
+                <nav class="wrap">
+                  <a
+                    class="button round"
+                    href="https://negset.com/NoMeiryo"
+                    target="_blank"
+                  >
+                    <i class="small">open_in_new</i>
+                    <span>Web</span>
+                  </a>
+                  <a
+                    class="button round"
+                    href="https://github.com/negset/NoMeiryo"
+                    target="_blank"
+                  >
+                    <i class="tiny">
+                      <svg xmlns="http://www.w3.org/2000/svg">
+                        <use href="img/github.svg#icon"></use>
+                      </svg>
+                    </i>
+                    <span>Source</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="border round no-padding margin">
+          <div class="grid no-space">
+            <div class="s12 m4">
+              <img class="responsive" src="img/shootergame.webp" />
+            </div>
+            <div class="s12 m8">
+              <div class="large-padding">
+                <h5>ShooterGame</h5>
+                <p>PC / Android 対応のシンプルな弾幕シューティング。</p>
+                <aside class="row wrap">
+                  <button class="chip fill">game</button>
+                  <button class="chip fill">desktop</button>
+                  <button class="chip fill">android</button>
+                  <button class="chip fill">kotlin</button>
+                  <button class="chip fill">libgdx</button>
+                </aside>
+                <nav class="wrap">
+                  <a
+                    class="button round"
+                    href="https://github.com/negset/ShooterGame/releases"
+                    target="_blank"
+                  >
+                    <i class="small">download</i>
+                    <span>Download</span>
+                  </a>
+                  <a
+                    class="button round"
+                    href="https://github.com/negset/ShooterGame"
+                    target="_blank"
+                  >
+                    <i class="tiny">
+                      <svg xmlns="http://www.w3.org/2000/svg">
+                        <use href="img/github.svg#icon"></use>
+                      </svg>
+                    </i>
+                    <span>Source</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="border round no-padding margin">
+          <div class="grid no-space">
+            <div class="s12 m4">
+              <img class="responsive" src="img/macaron.webp" />
+            </div>
+            <div class="s12 m8">
+              <div class="large-padding">
+                <h5>Macaron</h5>
+                <p>PC 向けリズムゲーム。</p>
+                <aside class="row wrap">
+                  <button class="chip fill">game</button>
+                  <button class="chip fill">desktop</button>
+                  <button class="chip fill">java</button>
+                  <button class="chip fill">slick2d</button>
+                </aside>
+                <nav class="wrap">
+                  <a
+                    class="button round"
+                    href="https://www.dropbox.com/scl/fo/1x4kk3txnxv36byy6530m/ANakuvzHFEvLfaa6jIAsYPI?rlkey=dfaldi1m9bmnublkleodqoosw"
+                    target="_blank"
+                  >
+                    <i class="small">download</i>
+                    <span>Download</span>
+                  </a>
+                  <a
+                    class="button round"
+                    href="https://github.com/negset/Macaron"
+                    target="_blank"
+                  >
+                    <i class="tiny">
+                      <svg xmlns="http://www.w3.org/2000/svg">
+                        <use href="img/github.svg#icon"></use>
+                      </svg>
+                    </i>
+                    <span>Source</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="border round no-padding margin">
+          <div class="grid no-space">
+            <div class="s12 m4">
+              <img class="responsive" src="img/negbeat.webp" />
+            </div>
+            <div class="s12 m8">
+              <div class="large-padding">
+                <h5>NegBeat</h5>
+                <p>PC 向けリズムゲーム。</p>
+                <aside class="row wrap">
+                  <button class="chip fill">game</button>
+                  <button class="chip fill">desktop</button>
+                  <button class="chip fill">java</button>
+                </aside>
+                <nav class="wrap">
+                  <a
+                    class="button round"
+                    href="https://youtu.be/LOFhuq8XyRc"
+                    target="_blank"
+                  >
+                    <i class="tiny">
+                      <svg>
+                        <use href="img/youtube.svg#icon"></use>
+                      </svg>
+                    </i>
+                    <span>YouTube</span>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
     </div>
-  </div>
 
-  <div class="content-footer">
-    <span class="footer-copyright">&copy; 2025 negset</span>
-  </div>
+    <div id="scroll-top">
+      <button class="square round extra tertiary medium-elevate">
+        <i>arrow_upward</i>
+      </button>
+    </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
-
+    <footer class="responsive center-align">&copy; 2026 negset</footer>
+  </body>
 </html>
