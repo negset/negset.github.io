@@ -1,3 +1,3 @@
 # negset.github.io
 
-negset's home page.
+negset's portfolio
